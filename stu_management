@@ -1,1 +1,85 @@
 
+student_table =[]
+
+while True :
+    print("STUDENT MANAGEMENT DETAILS AND SYSYTEM :")
+    print("1. add Student :")
+    print("2. view studnt :")
+    print("3. search student:")
+    print("4. update student:")
+    print("5. Delete student:")
+    print("6. Exit:")
+
+    choice=int(input("enter the choice:"))
+
+    if(choice==1):
+        stu_id=int(input("enter the student ID :"))
+        name=input("enter the name:")
+        age=int(input("enter the age :"))
+        mark=int(input("enter the mark:"))
+
+        student= {
+            "id":stu_id,
+            "name":name,
+            "age":age,
+            "mark":mark
+            }
+        student_table.append(student)
+        print("add student successfully:")
+
+
+    elif(choice==2):
+        if len(student_table) == 0:
+            print("no students here !!")
+        else:
+                print("students datails :")
+                for student in student_table:
+                    print(student)
+    elif(choice==3):
+        stu_idd = int(input("enter the stu _id:"))
+        found = False
+        for student in student_table:
+            stu_idd == stu_id
+            print(student_table)
+            found=True
+            break
+
+    elif(choice==4):
+        sid=int(input("enter the update id"))
+        found = False
+        for student in student_table:
+            if student["id"] == sid :
+                
+                student["name"]=input("enter the new name:")
+                student["age"]=int(input("enter the new age:"))
+                student["mark"]=int(input("enter the new mark:"))
+                print("update success fully")
+                found = True
+                break
+            else:
+                print("student not founded:")
+
+    elif(choice==5):
+        surya = int(input("enter the delete the stu_id:"))
+        found = False
+
+        for student in student_table:
+            if student["id"] == surya:
+                student_table.remove(student)
+                print("delete sucessfully:")
+                found = True
+                break
+            else:
+                print("no student id is founded ")
+    elif(choice==6):
+        print("thank you")
+        break
+    else:
+        print("enter the invalid options")
+        
+        
+        
+                
+        
+                
+        
